@@ -1,0 +1,33 @@
+{
+  "name": "Facebook birthday scraper",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Tool to scrape your friends birthdays on Facebook",
+  "homepage_url": "https://mateomejia.com/how-to-build-a-chrome-extension-with-javascript",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "page_action": {
+    "default_popup": "src/bg/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["declarativeContent", "storage"],
+  "options_page": "src/options/index.html",
+  "content_scripts": [
+    {
+      "matches": ["https://m.facebook.com/events/calendar/birthdays/"],
+      "js": ["src/inject/inject.js", "js/jquery/jquery.min.js"]
+    }
+  ]
+}

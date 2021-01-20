@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+    <style>
+      body {
+        width: 140px;
+        height: 70px;
+      }
+      button {
+        margin-top: 12px;
+        height: 24px;
+        width: 120px;
+        outline: none;
+        border: 0;
+        border-radius: 4px;
+        color: white;
+        background: grey;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      #radio-wrapper {
+        margin-top: 8px;
+        display: inline-flex;
+      }
+      input {
+        margin-left: 14px;
+      }
+      .centered-div {
+        margin: 0 auto;
+        width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centered-div">
+      <div id="radio-wrapper">
+        <input
+          type="radio"
+          id="json"
+          name="export"
+          value="json"
+          checked="checked"
+        />
+        <label for="json">json</label><br />
+        <input type="radio" id="csv" name="export" value="female" />
+        <label for="csv">csv</label><br />
+      </div>
+
+      <button id="getBirthdays">Get birthdays!</button>
+    </div>
+
+    <!-- inject javascript -->
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
