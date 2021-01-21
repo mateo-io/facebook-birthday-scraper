@@ -51,8 +51,7 @@ const birthdayScraper = async () => {
     currentSelector = `${currentSelector} > div`;
     scrollToBottom();
 
-    // TODO
-    if (allMonths.length < 1) {
+    if (allMonths.length < 12) {
       setTimeout(() => executeLoop(), BUFFER_TIME);
     } else {
       processData(allMonths);
